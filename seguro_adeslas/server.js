@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const authRoutes = require('./routes/authRoutes');
+const authRoutedni = require('./routes/authRoutedni');
+const authRoutepoliza = require('./routes/authRoutepoliza');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -19,7 +20,9 @@ const cors = require('cors');
 app.use(cors());
 
 // Usar las rutas de autenticación
-app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutedni);
+app.use('/api/auth', authRoutepoliza);
+
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);

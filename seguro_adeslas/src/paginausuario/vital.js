@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './vital.css';
 
-const Usuario = () => {
+const Vital = () => {
     return (
         <div>
 
@@ -29,4 +30,4 @@ const Usuario = () => {
     );
 };
 
-export default Usuario;
+export default Vital;

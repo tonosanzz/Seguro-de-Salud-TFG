@@ -42,16 +42,16 @@ const InicioSesionDni = (props ) => {
         // Redireccionar al usuario según el tipo de seguro
         switch (data.seguro) {
           case 'vital':
-            navigate('./paginausuario/vital');
+            navigate('../paginausuario/vital');
             break;
           case 'plena':
-            navigate('./paginausuario/plena');
+            navigate('../paginausuario/plena');
             break;
           case 'plus':
-            navigate('./paginausuario/plus');
+            navigate('../paginausuario/plus');
             break;
           case 'extra':
-            navigate('./paginausuario/extra');
+            navigate('../paginausuario/extra');
             break;
           default:
             console.error('Tipo de seguro no reconocido');

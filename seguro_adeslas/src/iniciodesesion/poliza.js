@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const InicioSesionDni = (props ) => {
+const InicioSesionPoliza = (props ) => {
   
   const [loginInfo, setLoginInfo] = useState({
     poliza: '',
@@ -25,7 +25,7 @@ const InicioSesionDni = (props ) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/iniciodesesion/dni', {
+      const response = await fetch('http://localhost:5000/api/auth/iniciodesesion/poliza', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,16 +39,16 @@ const InicioSesionDni = (props ) => {
         // Redireccionar al usuario según el tipo de seguro
         switch (data.seguro) {
           case 'vital':
-            navigate('./paginausuario/vital');
+            navigate('../paginausuario/vital');
             break;
           case 'plena':
-            navigate('./paginausuario/plena');
+            navigate('../paginausuario/plena');
             break;
           case 'plus':
-            navigate('./paginausuario/plus');
+            navigate('../paginausuario/plus');
             break;
           case 'extra':
-            navigate('./paginausuario/extra');
+            navigate('../paginausuario/extra');
             break;
           default:
             console.error('Tipo de seguro no reconocido');
@@ -113,4 +113,4 @@ const InicioSesionDni = (props ) => {
   );
 };
 
-export default InicioSesionDni;
+export default InicioSesionPoliza;

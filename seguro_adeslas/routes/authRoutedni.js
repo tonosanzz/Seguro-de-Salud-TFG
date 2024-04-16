@@ -9,7 +9,6 @@ router.post('/iniciodesesion/dni', async (req, res) => {
   try {
     const { dni, password } = req.body;
     const user = await User.findOne({ dni });
-
     if (!user) {
       return res.status(404).json({ message: 'Usuario no encontrado.' });
     }
