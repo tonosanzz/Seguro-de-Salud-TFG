@@ -1,0 +1,41 @@
+#iniciasesion {
+    display: inline-block;
+    background-color: #0c6a64;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+  .container {
+    background-color: #d2e1ec;
+  }
+  
+  .button:hover {
+    background-color: #c6e1f4;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-container h1 {
+    font-family: Oswald;
+    color: #0c6a64;
+    text-decoration: underline;
+  }
+  
+  
+  #logo {
+    display: flex;
+    margin: 0 auto;
+    max-width: 170%; /* Adjust the max-width to your desired dimensions */
+    height: 230px;
+    
+  }
