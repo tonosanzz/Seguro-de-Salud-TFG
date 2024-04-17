@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 //import logo from '../images/logo.png';
-import './dni.css';
+import './poliza.css';
 import { saveUser,} from '../useStorage';
 import { useNavigate } from 'react-router-dom';
 
@@ -69,15 +69,18 @@ const InicioSesionPoliza = (props ) => {
         
       </header>
       <div className="button-container">
-        <h2>INICIA SESIÓN</h2>
+        <h2 id="titulo">Accede al Chatbot de Adeslas</h2>
         {error && <p>Credenciales incorrectas</p>}
         <br />
         
+        <div id="caja">
+        <h3 id="inicia">Inicia sesión</h3>
           <form onSubmit={handleSubmit}>
             <div className="inputs">
             <input
-              type="number"
+              type="text"
               name="poliza"
+              id="poliza"
               value={loginInfo.poliza}
               onChange={handleChange}
               placeholder="Poliza"
@@ -92,23 +95,24 @@ const InicioSesionPoliza = (props ) => {
         <br/>
           <p>
           <div>
-            <a href="https://login.segurcaixaadeslas.es/auth/realms/ssoextadeslas/login-actions/reset-credentials?client_id=http%3A%2F%2Fadfs.segurcaixaadeslas.es%2Fadfs%2Fservices%2Ftrust&tab_id=73aOgYfZ5N8" target="_blank" >¿Ha olvidado la contraseña?</a>
+            <a href="https://login.segurcaixaadeslas.es/auth/realms/ssoextadeslas/login-actions/reset-credentials?client_id=http%3A%2F%2Fadfs.segurcaixaadeslas.es%2Fadfs%2Fservices%2Ftrust&tab_id=73aOgYfZ5N8" target="_blank" id="forget" >¿Ha olvidado la contraseña?</a>
           </div>
           </p>
           
         <br />
         <p>
-        <Link id="poliza" to="/iniciodesesion/dni">
+        <Link id="dni" to="/iniciodesesion/dni">
             Iniciar sesión con el número de DNI
         </Link>
         </p>
         <br/>
         <p>
         <div>
-            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" >Ver todos los seguros de Salud</a>
+            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" id="seguros" >Ver todos los seguros de Salud</a>
         </div>
           </p>
       </div>
+    </div>
     </div>
   );
 };

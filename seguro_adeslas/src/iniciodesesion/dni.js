@@ -72,14 +72,17 @@ const InicioSesionDni = (props ) => {
         
       </header>
       <div className="button-container">
-        <h2>INICIA SESIÓN</h2>
+        <h2 id="titulo">Accede al Chatbot de Adeslas</h2>
         {error && <p>Credenciales incorrectas</p>}
         <br />
         
+        <div id="caja">
+          <h3 id="inicia">Inicia sesión</h3>
           <form onSubmit={handleSubmit}>
             <div className="inputs">
             <input
               type="text"
+              id="dni"
               name="dni"
               value={loginInfo.dni}
               onChange={handleChange}
@@ -90,6 +93,7 @@ const InicioSesionDni = (props ) => {
               <br />
               <input
                 type="password"
+                id="password"
                 name="password"
                 value={loginInfo.password}
                 onChange={handleChange}
@@ -107,7 +111,7 @@ const InicioSesionDni = (props ) => {
         <br/>
           <p>
           <div>
-            <a href="https://login.segurcaixaadeslas.es/auth/realms/ssoextadeslas/login-actions/reset-credentials?client_id=http%3A%2F%2Fadfs.segurcaixaadeslas.es%2Fadfs%2Fservices%2Ftrust&tab_id=73aOgYfZ5N8" target="_blank" >¿Ha olvidado la contraseña?</a>
+            <a href="https://login.segurcaixaadeslas.es/auth/realms/ssoextadeslas/login-actions/reset-credentials?client_id=http%3A%2F%2Fadfs.segurcaixaadeslas.es%2Fadfs%2Fservices%2Ftrust&tab_id=73aOgYfZ5N8" target="_blank" id="forget" >¿Ha olvidado la contraseña?</a>
           </div>
           </p>
           
@@ -120,10 +124,11 @@ const InicioSesionDni = (props ) => {
         <br/>
         <p>
         <div>
-            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" >Ver todos los seguros de Salud</a>
+            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" id="seguros" >Ver todos los seguros de Salud</a>
         </div>
           </p>
       </div>
+    </div>
     </div>
   );
 };

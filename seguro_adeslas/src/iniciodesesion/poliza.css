@@ -1,41 +1,102 @@
-#iniciasesion {
-    display: inline-block;
-    background-color: #0c6a64;
-    border: none;
-    color: white;
-    text-align: center;
+body {
+  background-color: white; /* blanco */
+}
+
+#caja{
+  border-radius: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0px ;
+  background-color: #fff ;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-width: 460px;
+  text-align: center;
+  padding: 30px;
+  margin: 0.5rem 0 1rem 0;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+#titulo{
+  color: #3D3D3D;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    box-sizing: inherit;
+    font-family: Roboto, sans-serif;
+    margin-top: 50px; 
+}
+
+#inicia{
+  color: #3D3D3D;
+}
+
+#forget{
+  color: #3D3D3D
+}
+
+#seguros{
+  color: #3D3D3D
+}
+
+#poliza{
+  border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 394px;
     font-size: 16px;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 7px;
-  }
-  .container {
-    background-color: #d2e1ec;
-  }
+    margin: 0 0 8px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+}
+
+#dni{
+
+  color: #3D3D3D;  
+}
+
+
+#iniciasesion {
+  display: inline-block;
+  background-color: #107db7;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.container {
+  background-color: black;
+}
+
+.button:hover {
+  background-color: #c6e1f4;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container h1 {
+  font-family: Oswald;
+  color: #107db7;
+  text-decoration: underline;
+}
+
+
+#logo {
+  display: flex;
+  margin: 0 auto;
+  max-width: 170%; /* Adjust the max-width to your desired dimensions */
+  height: 230px;
   
-  .button:hover {
-    background-color: #c6e1f4;
-  }
-  
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button-container h1 {
-    font-family: Oswald;
-    color: #0c6a64;
-    text-decoration: underline;
-  }
-  
-  
-  #logo {
-    display: flex;
-    margin: 0 auto;
-    max-width: 170%; /* Adjust the max-width to your desired dimensions */
-    height: 230px;
-    
-  }
+}
