@@ -1,4 +1,3 @@
-// userStorage.js
 export const saveUser = (user) => {
     localStorage.setItem('user', JSON.stringify(user));
   };
@@ -13,7 +12,3 @@ export const saveUser = (user) => {
   export const clearUser = () => {
     localStorage.removeItem('user');
   };
-  
-
-  
-  

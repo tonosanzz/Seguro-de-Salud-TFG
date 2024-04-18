@@ -7,24 +7,15 @@ const Vital = () => {
         <div>
 
             <h1>Bienvenido al chatbot de Adeslas</h1>
-            <p>Selecciona una opción:</p>
+            
             <div className="button-container" >
 
-                <Link to='/usuario/quienessomos'>
-                    <button className= "boton1" >¿Quiénes somos?</button>
-                </Link>
-                <br />
-                <Link to='/usuario/mapa'>
-                    <button className= "boton2" >Mapa</button>
-                </Link>
-                <br />
-                <Link to='/usuario/ayuda'>
-                    <button className= "boton3" >Ayuda</button>
-                </Link>
-                <br />
-                <Link to='/usuario/misreservas'>
-                    <button className= "boton4" >Mis Reservas</button>
-                </Link>
+            <iframe 
+                src="https://copilotstudio.microsoft.com/environments/cbd3a541-d558-e37c-9c34-47f65cc82e0a/bots/cr773_seguroEstudiantesAdeslas/webchat?__version__=2" 
+                frameBorder="0" 
+                style={{ width: '450px', height: '1000px' }} 
+            />
+
             </div>
         </div>
     );

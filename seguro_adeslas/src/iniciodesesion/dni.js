@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 //import logo from '../images/logo.png';
 import './dni.css';
-import { saveUser,} from '../useStorage';
 import { useNavigate } from 'react-router-dom';
-
+import icono_adeslas from '../images/icono_adeslas.png';
 
 
 
@@ -68,8 +67,10 @@ const InicioSesionDni = (props ) => {
 
   return (
     <div>
-      <header className="button-container">
-        
+      <header id="cabecera" className="button-container">
+      <a id="foto">
+          <img src={icono_adeslas}/>
+        </a>
       </header>
       <div className="button-container">
         <h2 id="titulo">Accede al Chatbot de Adeslas</h2>
