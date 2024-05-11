@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 //import logo from '../images/logo.png';
-import './poliza.css';
+import './passport.css';
 import { useNavigate } from 'react-router-dom';
 import icono_adeslas from '../images/icono_adeslas.png';
 
@@ -9,10 +9,10 @@ import icono_adeslas from '../images/icono_adeslas.png';
 
 
 
-const InicioSesionPoliza = (props ) => {
+const InicioSesionPassport = (props ) => {
   
   const [loginInfo, setLoginInfo] = useState({
-    poliza: '',
+    passport: '',
     
   });
   const [error, setError] = useState(false);
@@ -25,7 +25,7 @@ const InicioSesionPoliza = (props ) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/iniciodesesion/poliza', {
+      const response = await fetch('http://localhost:5000/api/auth/iniciodesesion/passport', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,17 +38,17 @@ const InicioSesionPoliza = (props ) => {
       if (response.ok) {
         // Redireccionar al usuario según el tipo de seguro
         switch (data.seguro) {
-          case 'vital':
-            navigate('../paginausuario/vital');
-            break;
           case 'plena':
             navigate('../paginausuario/plena');
             break;
-          case 'plus':
-            navigate('../paginausuario/plus');
+          case 'primera':
+            navigate('../paginausuario/primera');
             break;
           case 'extra':
             navigate('../paginausuario/extra');
+            break;
+          case 'host':
+            navigate('../paginausuario/host');
             break;
           default:
             console.error('Tipo de seguro no reconocido');
@@ -65,13 +65,9 @@ const InicioSesionPoliza = (props ) => {
 
   return (
     <div>
-      <header className="button-container">
-        <a id="foto">
-          <img src={icono_adeslas}/>
-        </a>
-      </header>
+      
       <div className="button-container">
-        <h2 id="titulo">Accede al Chatbot de Adeslas</h2>
+        <h2 id="titulo">Accede al Chatbot de la Aseguradora</h2>
         {error && <p>Credenciales incorrectas</p>}
         <br />
         
@@ -81,11 +77,11 @@ const InicioSesionPoliza = (props ) => {
             <div className="inputs">
             <input
               type="text"
-              name="poliza"
-              id="poliza"
+              name="passport"
+              id="passport"
               value={loginInfo.poliza}
               onChange={handleChange}
-              placeholder="Poliza"
+              placeholder="Pasaporte"
               required
             />
             </div>
@@ -94,14 +90,7 @@ const InicioSesionPoliza = (props ) => {
             </button>
           </form>
         
-        <br/>
-          <p>
-          <div>
-            <a href="https://login.segurcaixaadeslas.es/auth/realms/ssoextadeslas/login-actions/reset-credentials?client_id=http%3A%2F%2Fadfs.segurcaixaadeslas.es%2Fadfs%2Fservices%2Ftrust&tab_id=73aOgYfZ5N8" target="_blank" id="forget" >¿Ha olvidado la contraseña?</a>
-          </div>
-          </p>
-          
-        <br />
+      
         <p>
         <Link id="dni" to="/iniciodesesion/dni">
             Iniciar sesión con el número de DNI
@@ -119,4 +108,4 @@ const InicioSesionPoliza = (props ) => {
   );
 };
 
-export default InicioSesionPoliza;
+export default InicioSesionPassport;

@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutedni = require('./routes/authRoutedni');
-const authRoutepoliza = require('./routes/authRoutepoliza');
+const authRoutepassport = require('./routes/authRoutepassport');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,7 +21,7 @@ app.use(cors());
 
 // Usar las rutas de autenticación
 app.use('/api/auth', authRoutedni);
-app.use('/api/auth', authRoutepoliza);
+app.use('/api/auth', authRoutepassport);
 
 
 app.listen(PORT, () => {

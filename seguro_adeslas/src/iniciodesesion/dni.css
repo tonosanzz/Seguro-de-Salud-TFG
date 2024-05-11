@@ -1,6 +1,6 @@
 
 body {
-  background-color: white; /* blanco */
+  background-color: #aae8f3; /* blanco */
 }
 
 #cabecera{
@@ -94,7 +94,7 @@ body {
 
 #iniciasesion {
   display: inline-block;
-  background-color: #107db7;
+  background-color: #aae8f3;
   border: none;
   color: white;
   text-align: center;
@@ -117,11 +117,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color:  #aae8f3;
 }
 
 .button-container h1 {
   font-family: Oswald;
-  color: #107db7;
+  color:  #27aec6;
   text-decoration: underline;
 }
 

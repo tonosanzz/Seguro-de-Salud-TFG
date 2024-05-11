@@ -4,9 +4,8 @@ const initialState = {
   user: {
     loggedIn: false,
     dni: '',
-    password: '',
     email: '',
-    poliza: '',
+    passport: '',
   },
   // Otras propiedades que quieras incluir en el estado inicial
 };
@@ -19,21 +18,19 @@ function reducer(state = initialState, action) {
         user: {
           loggedIn: true,
           dni: action.payload.dni,
-          password: action.payload.password,
           email: action.payload.email,
-          poliza: '',
+          passport: '',
           seguro: action.payload.seguro,
         },
       };
-    case 'LOGIN_POLIZA':
+    case 'LOGIN_PASSPORT':
       return {
         ...state,
         user: {
           loggedIn: true,
           dni: '',
-          password: '',
           email: action.payload.email,
-          poliza: action.payload.poliza,
+          passport: action.payload.passport,
           seguro: action.payload.seguro,
       },
 

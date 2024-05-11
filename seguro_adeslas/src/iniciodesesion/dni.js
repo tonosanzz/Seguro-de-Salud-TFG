@@ -10,8 +10,7 @@ import icono_adeslas from '../images/icono_adeslas.png';
 const InicioSesionDni = (props ) => {
   
   const [loginInfo, setLoginInfo] = useState({
-    dni: '',
-    password: ''
+    dni: ''
   });
   const [error, setError] = useState(false);
   const navigate = useNavigate();
@@ -40,17 +39,17 @@ const InicioSesionDni = (props ) => {
         
         // Redireccionar al usuario según el tipo de seguro
         switch (data.seguro) {
-          case 'vital':
-            navigate('../paginausuario/vital');
-            break;
           case 'plena':
             navigate('../paginausuario/plena');
             break;
-          case 'plus':
-            navigate('../paginausuario/plus');
+          case 'primera':
+            navigate('../paginausuario/primera');
             break;
           case 'extra':
             navigate('../paginausuario/extra');
+            break;
+          case 'host':
+            navigate('../paginausuario/host');
             break;
           default:
             console.error('Tipo de seguro no reconocido');
@@ -67,13 +66,9 @@ const InicioSesionDni = (props ) => {
 
   return (
     <div>
-      <header id="cabecera" className="button-container">
-      <a id="foto">
-          <img src={icono_adeslas}/>
-        </a>
-      </header>
+      
       <div className="button-container">
-        <h2 id="titulo">Accede al Chatbot de Adeslas</h2>
+        <h2 id="titulo">Accede al Chatbot de la Aseguradora</h2>
         {error && <p>Credenciales incorrectas</p>}
         <br />
         
@@ -92,34 +87,15 @@ const InicioSesionDni = (props ) => {
             />
               <br />
               <br />
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={loginInfo.password}
-                onChange={handleChange}
-                placeholder="Contraseña"
-                required
-              />
-              <br />
-              <br />
             </div>
             <button id="iniciasesion" type="submit">
               Iniciar sesión
             </button>
           </form>
         
-        <br/>
-          <p>
-          <div>
-            <a href="https://login.segurcaixaadeslas.es/auth/realms/ssoextadeslas/login-actions/reset-credentials?client_id=http%3A%2F%2Fadfs.segurcaixaadeslas.es%2Fadfs%2Fservices%2Ftrust&tab_id=73aOgYfZ5N8" target="_blank" id="forget" >¿Ha olvidado la contraseña?</a>
-          </div>
-          </p>
-          
-        <br />
         <p>
-        <Link id="poliza" to="/iniciodesesion/poliza">
-            Iniciar sesión con el número de póliza
+        <Link id="pasaporte" to="/iniciodesesion/passport">
+            Iniciar sesión con el número de pasaporte
         </Link>
         </p>
         <br/>

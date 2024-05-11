@@ -4,11 +4,11 @@ const router = express.Router();
 
 
 
-router.post('/iniciodesesion/poliza', async (req, res) => {
+router.post('/iniciodesesion/passport', async (req, res) => {
     console.log(req.body);
   try {
-    const { poliza } = req.body;
-    const user = await User.findOne({ poliza });
+    const { passport } = req.body;
+    const user = await User.findOne({ passport });
     if (!user) {
       return res.status(404).json({ message: 'Usuario no encontrado.' });
     }

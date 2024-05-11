@@ -2,9 +2,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import InicioSesionDni from './iniciodesesion/dni';
-import InicioSesionPoliza from './iniciodesesion/poliza';
+import InicioSesionPassport from './iniciodesesion/passport';
 import Errores from './Error';
-import Vital from './paginausuario/vital';
+import Plena from './paginausuario/plena';
+import Primera from './paginausuario/primera';
+import Extra from './paginausuario/extra';
 import React, { useState } from 'react';
 import { loadUser, saveUser } from './useStorage';
 
@@ -21,8 +23,10 @@ function App() {
     <Routes>
       <Route path='/' element={<InicioSesionDni actualizarUser={actualizarUser}/>} />
       <Route path='/iniciodesesion/dni' element={<InicioSesionDni actualizarUser={actualizarUser}/>} />
-      <Route path='/iniciodesesion/poliza' element={<InicioSesionPoliza actualizarUser={actualizarUser}/>} />
-      <Route path='/paginausuario/vital' element={<Vital/>} />
+      <Route path='/iniciodesesion/passport' element={<InicioSesionPassport actualizarUser={actualizarUser}/>} />
+      <Route path='/paginausuario/plena' element={<Plena/>} />
+      <Route path='/paginausuario/primera' element={<Primera/>} />
+      <Route path='/paginausuario/extra' element={<Extra/>} />
       <Route path='/*' element={<Errores user={user} />} />
     </Routes>
     
