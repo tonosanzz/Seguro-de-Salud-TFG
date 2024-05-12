@@ -1,5 +1,5 @@
 body {
-    background-color: #107db7; /* blanco */
+    background-color: white !important; /* blanco */
   }
   
   .button-container {
@@ -15,7 +15,7 @@ body {
   #titulo{
   
     text-align: center;
-    color: white;
+    color: #3D3D3D;
   
   }
    

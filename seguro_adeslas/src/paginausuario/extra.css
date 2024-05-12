@@ -1,75 +1,112 @@
-body {
-    background-color: #107db7; /* blanco */
-  }
-  
-  .button-container {
-      display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-   }
-   h1{
-       font-family: Roboto;  
-   }
-  
-  #titulo{
-  
-    text-align: center;
-    color: white;
-  
-  }
-   
-   p{
-       font-family: Oswald;  
-   }
-   #bienvenido{
-       font-family: Oswald;
-  
-   #chatbot{
-    border-radius: 2px;
-    padding-bottom: 0px;
-    margin-bottom: 0px ;
-    background-color: #fff ;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    text-align: center;
-    padding: 30px;
-    margin: 0.5rem 0 1rem 0;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-  }
-        
-    }
-   .button:hover {
-       background-color: #d2e1ec;
-   }  
-   
-     .boton1{
-       display: inline-block;
-       background-color: #0c6a64;
-       border: none;
-       color: white;
-       text-align: center;
-       font-size: 16px;
-       padding: 10px 20px;
-       margin: 10px;
-       cursor: pointer;
-       border-radius: 7px;
-       width: 100%;
-     }
-   
-   
-     .boton2{
-       display: inline-block;
-       background-color: #0c6a64;
-       border: none;
-       color: white;
-       text-align: center;
-       font-size: 16px;
-       padding: 10px 20px;
-       margin: 10px;
-       cursor: pointer;
-       border-radius: 7px;
-       width: 100%;
-     }
-   
-     
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  gap: 50px; 
+ 
+}
+
+.chatbot {
+  width: auto; /* Permite que el contenedor se ajuste al tamaño del iframe */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 150px;
+  padding: 20px; /* Ajusta el relleno si es necesario */
+    flex: 0 1 auto; /* No permite que los contenedores crezcan, solo usan el espacio necesario */
+}
+
+.feedback {
+  width: auto; /* Ajusta esto si necesitas un ancho específico */
+  padding: 30px; /* Más padding para hacer el recuadro más grande */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 200px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 27px; /* Aumenta el tamaño de texto general dentro del feedback */
+  font-family: Roboto, sans-serif;
+}
+
+.upper-container {
+  width: 100%;
+  background-color: rgb(12, 81, 93); /* Color verde oscuro para el fondo */
+  padding: 15px 0; /* Agrega un poco de padding vertical */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+#titulo1 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgb(12, 81, 93);
+  font-family: Roboto, sans-serif;
+  font-size: 25px;
+}
+
+#pregunta1{
+  font-family: Roboto, sans-serif;
+}
+
+#gracias{
+  font-family: Roboto, sans-serif;
+}
+
+
+#pregunta2{
+  font-family: Roboto, sans-serif;
+}
+
+#enviar{
+  display: inline-block;
+  border: none;
+  background-color: rgb(12, 81, 93);
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin: 6px;
+  border-radius: 4px;
+}
+
+.star-rating button {
+  font-size: 50px; /* Hace las estrellas más grandes */
+  color: gray;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.star-rating .on {
+  color: gold;
+}
+
+.star-rating .off {
+  color: gray;
+}
+
+.comment-container {
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  gap: 10px;
+}
+
+.comment-input {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+  padding: 10px 15px; /* Añade padding para hacer el input más alto y cómodo para escribir */
+  font-size: 16px; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+  border: 2px solid #ccc; /* Añade un borde sólido */
+  border-radius: 5px; /* Suaviza los bordes para hacerlos ligeramente redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra ligera para profundidad */
+}
+
+.comment-input:focus {
+  border-color: #007BFF; /* Cambia el color del borde al enfocarse para mejor visibilidad */
+  outline: none; /* Elimina el outline predeterminado para un estilo más limpio */
+}
