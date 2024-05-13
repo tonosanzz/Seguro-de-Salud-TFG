@@ -36,17 +36,17 @@ const InicioSesionDni = (props ) => {
       const data = await response.json();
 
       if (response.ok) {
-        
+       
         // Redireccionar al usuario según el tipo de seguro
         switch (data.seguro) {
           case 'plena':
-            navigate('../paginausuario/plena');
+            navigate('../paginausuario/plena', { state: { passport: data.passport } });
             break;
           case 'primera':
-            navigate('../paginausuario/primera');
+            navigate('../paginausuario/primera', { state: { passport: data.passport } });
             break;
           case 'extra':
-            navigate('../paginausuario/extra');
+            navigate('../paginausuario/extra', { state: { passport: data.passport } });
             break;
           case 'host':
             navigate('../paginausuario/host');

@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './extra.css';
 import icono_usuario from '../images/icono_usuario.png';
 
 const Extra = () => {
+    const location = useLocation();
+    console.log('Location object:', location);  // Esto te mostrará todo el objeto de ubicación
+
+    const passport = location.state?.passport;
+    console.log('Passport obtenido:', passport);
     const [rating, setRating] = useState(0);
     const [submitted, setSubmitted] = useState(false);
     const [comment, setComment] = useState('');
     const [showMenu, setShowMenu] = useState(false);
+
+    console.log(passport); 
 
     const handleRating = async (rate) => {
         setRating(rate);
@@ -18,7 +25,7 @@ const Extra = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ valoracion: rate })  
+            body: JSON.stringify({ passport: passport, valoracion: rate })  
         });
         if (response.ok) {
             console.log("Valoración enviada correctamente.");
@@ -32,7 +39,7 @@ const Extra = () => {
     };
 
     const handleSubmitComment = async () => {
-        const data = { comentarios: comment }; // Asegúrate de que este campo coincide con el modelo
+        const data = { passport: passport, comentarios: comment }; // Asegúrate de que este campo coincide con el modelo
         const response = await fetch('http://localhost:5000/api/auth/comment', {
             method: 'POST',
             headers: {

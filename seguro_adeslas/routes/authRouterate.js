@@ -5,41 +5,49 @@ const User = require('../models/user');  // Asegúrate de que la ruta al modelo 
 
 // Ruta para guardar la valoración de un usuario
 router.post('/rating', async (req, res) => {
+    const { passport, valoracion } = req.body;
     console.log(req.body);
-  const { dni, rating } = req.body;
-  try {
-    const user = await User.findOneAndUpdate(
-      { dni: dni },
-      { $set: { valoracion: rating } },
-      { new: true }
-    );
-    if (user) {
-      res.status(200).json({ message: 'Valoración actualizada correctamente', user });
-    } else {
-      res.status(404).json({ message: 'Usuario no encontrado' });
+
+    try {
+        const user = await User.findOneAndUpdate(
+            { passport: passport },
+            { $set: { valoracion: valoracion } },
+            { new: true, runValidators: true }
+        );
+
+        if (user) {
+            console.log("Actualización exitosa:", user);
+            return res.status(200).json({ message: 'Valoración actualizada correctamente', user: user });
+        } else {
+            return res.status(404).json({ message: 'Usuario no encontrado' });
+        }
+    } catch (error) {
+        console.error('Error al actualizar la valoración:', error);
+        return res.status(500).json({ message: 'Error del servidor', error: error.message });
     }
-  } catch (error) {
-    res.status(500).json({ message: 'Error al actualizar la valoración', error: error.message });
-  }
 });
 
-// Ruta para guardar el comentario de un usuario
 router.post('/comment', async (req, res) => {
-  const { dni, comentarios } = req.body;
-  try {
-    const user = await User.findOneAndUpdate(
-      { dni: dni },
-      { $set: { comentarios: comentarios } },
-      { new: true }
-    );
-    if (user) {
-      res.status(200).json({ message: 'Comentario actualizado correctamente', user });
-    } else {
-      res.status(404).json({ message: 'Usuario no encontrado' });
+    const { passport, comentarios } = req.body;
+    console.log("Recibido para actualizar comentario:", req.body);
+
+    try {
+        const user = await User.findOneAndUpdate(
+            { passport: passport },
+            { $set: { comentarios: comentarios } },
+            { new: true }
+        );
+
+        if (user) {
+            console.log("Comentario actualizado exitosamente:", user);
+            return res.status(200).json({ message: 'Comentario actualizado correctamente', user: user });
+        } else {
+            return res.status(404).json({ message: 'Usuario no encontrado' });
+        }
+    } catch (error) {
+        console.error('Error al actualizar el comentario:', error);
+        return res.status(500).json({ message: 'Error del servidor', error: error.message });
     }
-  } catch (error) {
-    res.status(500).json({ message: 'Error al actualizar el comentario', error: error.message });
-  }
 });
 
 module.exports = router;

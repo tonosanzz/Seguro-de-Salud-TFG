@@ -18,7 +18,7 @@ router.post('/iniciodesesion/passport', async (req, res) => {
     
 
     // Si todo es correcto, devolver el tipo de seguro al frontend
-    res.json({ seguro: user.seguro });
+    res.json({ seguro: user.seguro, passport: user.passport });
 
   } catch (error) {
     console.error(error);

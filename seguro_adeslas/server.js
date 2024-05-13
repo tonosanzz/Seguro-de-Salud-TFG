@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const authRoutedni = require('./routes/authRoutedni');
 const authRoutepassport = require('./routes/authRoutepassport');
-const authRouterate = require('./routes/authRouterate'); // Asegúrate de que la ruta es correcta
+const authRouterate = require('./routes/authRouterate'); 
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,7 +23,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/ClientesAdeslas', {
 // Usar las rutas de autenticación
 app.use('/api/auth', authRoutedni);
 app.use('/api/auth', authRoutepassport);
-app.use('/api/auth', authRouterate); // Nueva ruta para manejar valoraciones y comentarios
+app.use('/api/auth', authRouterate); 
+
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
