@@ -110,3 +110,58 @@
   border-color: #007BFF; /* Cambia el color del borde al enfocarse para mejor visibilidad */
   outline: none; /* Elimina el outline predeterminado para un estilo más limpio */
 }
+
+.user-icon img:hover {
+  cursor: pointer;
+  opacity: 0.9; /* Ligeramente transparente al pasar el mouse */
+}
+
+.user-icon img {
+  width: 55px;  /* Tamaño más pequeño, ajusta según tus necesidades */
+  height: 55px; /* Mismo valor que el ancho para mantener la proporción y hacerla circular */
+  border-radius: 50%; /* Hace que los bordes de la imagen sean completamente redondos */
+  object-fit: cover;
+  margin-right: 10px; /* Asegura que la imagen cubra completamente el espacio sin distorsionarse */
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0; /* Alinea el menú con el lado derecho del icono de usuario */
+  top: 60px; /* Posición justo debajo del icono de usuario */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; /* O el ancho que prefieras */
+  margin: 0;
+  margin-top: 20px;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-user-image {
+  width: 60px; /* Tamaño más grande para la imagen dentro del menú */
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #ccc; /* Borde gris para la imagen */
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
