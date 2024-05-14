@@ -1,0 +1,50 @@
+#titulo1 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgb(12, 81, 93);
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+  }
+  .upper-container {
+    width: 100%;
+    background-color: rgb(12, 81, 93); /* Color verde oscuro para el fondo */
+    padding: 15px 0; /* Agrega un poco de padding vertical */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+
+/* host.css */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #333; /* Asegurando que el texto sea visible */
+}
+
+.valoracion-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff; /* Fondo blanco para cada item */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.valoracion-item p {
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.valoracion-item strong {
+    color: #000; /* Texto en negrita en color negro */
+}
+
+.star-rating {
+    color: gold;
+    font-size: 20px; /* Ajustando el tamaño de las estrellas */
+}

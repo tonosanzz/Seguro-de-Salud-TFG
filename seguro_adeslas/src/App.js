@@ -7,6 +7,7 @@ import Errores from './Error';
 import Plena from './paginausuario/plena';
 import Primera from './paginausuario/primera';
 import Extra from './paginausuario/extra';
+import Host from './paginausuario/host';
 import React, { useState } from 'react';
 import { loadUser, saveUser } from './useStorage';
 
@@ -27,6 +28,7 @@ function App() {
       <Route path='/paginausuario/plena' element={<Plena/>} />
       <Route path='/paginausuario/primera' element={<Primera/>} />
       <Route path='/paginausuario/extra' element={<Extra/>} />
+      <Route path='/paginausuario/host' element={<Host/>} />
       <Route path='/*' element={<Errores user={user} />} />
     </Routes>
     
