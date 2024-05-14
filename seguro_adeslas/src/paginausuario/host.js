@@ -7,7 +7,7 @@ const Host = () => {
     useEffect(() => {
         const fetchValoraciones = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/auth/valoraciones');
+                const response = await fetch('https://seguro-de-salud.herokuapp.com/api/auth/valoraciones');
                 const data = await response.json();
                 setValoraciones(data);
             } catch (error) {

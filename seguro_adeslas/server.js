@@ -27,7 +27,7 @@ app.use('/api/auth', authRouterate);
 
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  
 });
 
 

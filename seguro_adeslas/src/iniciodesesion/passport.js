@@ -25,7 +25,7 @@ const InicioSesionPassport = (props ) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/iniciodesesion/passport', {
+      const response = await fetch('https://seguro-de-salud.herokuapp.com/api/auth/iniciodesesion/passport', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

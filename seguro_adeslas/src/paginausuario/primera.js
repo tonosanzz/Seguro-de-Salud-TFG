@@ -20,7 +20,7 @@ const Extra = () => {
         setRating(rate);
         setSubmitted(true);
         // Enviar la valoración al backend inmediatamente después de ser seleccionada
-        const response = await fetch('http://localhost:5000/api/auth/rating', { 
+        const response = await fetch('https://seguro-de-salud.herokuapp.com/api/auth/rating', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const Extra = () => {
 
     const handleSubmitComment = async () => {
         const data = { passport: passport, comentarios: comment }; // Asegúrate de que este campo coincide con el modelo
-        const response = await fetch('http://localhost:5000/api/auth/comment', {
+        const response = await fetch('https://seguro-de-salud.herokuapp.com/api/auth/comment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
