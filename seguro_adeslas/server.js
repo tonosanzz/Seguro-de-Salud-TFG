@@ -10,7 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json()); // Para parsear el cuerpo de las solicitudes JSON
-app.use(cors()); // Manejar CORS
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://segurodesaludasm.com'
+}));
+
 
 // Conectar a MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/ClientesAdeslas', {
