@@ -25,7 +25,7 @@ const InicioSesionDni = (props ) => {
     console.log(JSON.stringify(loginInfo));
 
     try {
-      const response = await fetch('https://seguro-de-salud.herokuapp.com/api/auth/iniciodesesion/dni', {
+      const response = await fetch('api/auth/iniciodesesion/dni', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

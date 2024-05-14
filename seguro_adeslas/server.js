@@ -11,9 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json()); // Para parsear el cuerpo de las solicitudes JSON
 const cors = require('cors');
-app.use(cors({
-    origin: 'https://segurodesaludasm.com'
-}));
+app.use(cors());
 
 
 // Conectar a MongoDB
