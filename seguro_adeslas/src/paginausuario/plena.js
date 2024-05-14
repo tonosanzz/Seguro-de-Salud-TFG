@@ -20,7 +20,7 @@ const Plena = () => {
         setRating(rate);
         setSubmitted(true);
         // Enviar la valoración al backend inmediatamente después de ser seleccionada
-        const response = await fetch('api/auth/rating', { 
+        const response = await fetch('http://localhost:5000/api/auth/rating', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const Plena = () => {
 
     const handleSubmitComment = async () => {
         const data = { passport: passport, comentarios: comment }; // Asegúrate de que este campo coincide con el modelo
-        const response = await fetch('api/auth/comment', {
+        const response = await fetch('http://localhost:5000/api/auth/comment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

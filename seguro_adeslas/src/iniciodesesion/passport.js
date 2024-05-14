@@ -25,7 +25,7 @@ const InicioSesionPassport = (props ) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('api/auth/iniciodesesion/passport', {
+      const response = await fetch('http://localhost:5000/api/auth/iniciodesesion/passport', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const InicioSesionPassport = (props ) => {
         <br/>
         <p>
         <div>
-            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" rel="noopener noreferrer" id="seguros" >Ver todos los seguros de Salud</a>
+            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" id="seguros" >Ver todos los seguros de Salud</a>
         </div>
           </p>
       </div>
