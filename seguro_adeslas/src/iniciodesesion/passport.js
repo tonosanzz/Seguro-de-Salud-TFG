@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 //import logo from '../images/logo.png';
 import './passport.css';
 import { useNavigate } from 'react-router-dom';
-import icono_adeslas from '../images/icono_adeslas.png';
+
 
 
 
@@ -99,7 +99,7 @@ const InicioSesionPassport = (props ) => {
         <br/>
         <p>
         <div>
-            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" id="seguros" >Ver todos los seguros de Salud</a>
+            <a href="https://www.segurcaixaadeslas.es/particulares/encuentra-tu-seguro" target="_blank" rel="noopener noreferrer" id="seguros" >Ver todos los seguros de Salud</a>
         </div>
           </p>
       </div>
