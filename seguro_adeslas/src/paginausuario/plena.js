@@ -77,10 +77,9 @@ const Plena = () => {
             </div>
             <div className="content-container">
                 <div className="chatbot">
-                <iframe src="https://web.powerva.microsoft.com/environments/Default-89248974-515e-4d65-9469-ab424abfd2d2/bots/cr767_seguroPrimera/webchat?__version__=2"
+                <iframe src="https://web.powerva.microsoft.com/environments/cbd3a541-d558-e37c-9c34-47f65cc82e0a/bots/cr773_seguroPlena/webchat?__version__=2" 
             frameBorder="0"
             style={{ width: '350px', height: '500px' }} 
-            title="2"
             />
                 </div>
                 <div className="feedback">
@@ -118,7 +117,6 @@ const Plena = () => {
 
 export default Plena;
 
-<iframe src="https://web.powerva.microsoft.com/environments/Default-89248974-515e-4d65-9469-ab424abfd2d2/bots/cr767_seguroPrimera/webchat?__version__=2"
-            frameBorder="0"
-            style={{ width: '350px', height: '500px' }} 
-            />
+
+
+            
