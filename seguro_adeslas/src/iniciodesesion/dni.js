@@ -48,9 +48,6 @@ const InicioSesionDni = (props ) => {
           case 'extra':
             navigate('../paginausuario/extra', { state: { passport: data.passport } });
             break;
-          case 'host':
-            navigate('../paginausuario/host');
-            break;
           default:
             console.error('Tipo de seguro no reconocido');
         }
@@ -92,12 +89,21 @@ const InicioSesionDni = (props ) => {
               Iniciar sesión
             </button>
           </form>
-        
+        <div>
         <p>
         <Link id="pasaporte" to="/iniciodesesion/passport">
             Iniciar sesión con el número de pasaporte
         </Link>
         </p>
+        </div>
+        <br/>
+        <div>
+        <p>
+        <Link id="gestor" to="/iniciodesesion/gestor">
+            Iniciar sesión como gestor
+        </Link>
+        </p>
+        </div>
         <br/>
         <p>
         <div>

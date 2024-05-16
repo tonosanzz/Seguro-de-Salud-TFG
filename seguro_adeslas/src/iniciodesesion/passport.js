@@ -47,9 +47,6 @@ const InicioSesionPassport = (props ) => {
           case 'extra':
             navigate('../paginausuario/extra', { state: { passport: data.passport } });
             break;
-          case 'host':
-            navigate('../paginausuario/host');
-            break;
           default:
             console.error('Tipo de seguro no reconocido');
         }
