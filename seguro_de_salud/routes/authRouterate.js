@@ -54,7 +54,7 @@ router.post('/comment', async (req, res) => {
 
 router.get('/valoraciones', async (req, res) => {
     try {
-        const valoraciones = await User.find({}, 'nombre valoracion comentarios fecha').sort({fecha: -1}); // Selecciona sólo los campos necesarios
+        const valoraciones = await User.find({}, 'nombre valoracion comentarios fecha seguro').sort({fecha: -1}); // Selecciona sólo los campos necesarios
         res.status(200).json(valoraciones);
     } catch (error) {
         res.status(500).json({ message: "Error al obtener las valoraciones", error: error.message });

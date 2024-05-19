@@ -28,6 +28,7 @@ const Host = () => {
                 {valoraciones.map((valoracion, index) => (
                     <li key={index} className="valoracion-item">
                         <p><strong>Nombre:</strong> {valoracion.nombre}</p>
+                        <p><strong>Seguro:</strong> {valoracion.seguro}</p>
                         <p><strong>Valoración:</strong>
                 {valoracion.valoracion > 0 ? 
                     <span className="star-rating">
